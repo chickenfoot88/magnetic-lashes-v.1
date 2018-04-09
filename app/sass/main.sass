@@ -42,4 +42,145 @@ body
 	max-width: 100%
 	height: auto
 
+h1, h2, h3, h4, h5, h6
+	font-family: $headers-font, sans-serif
+	text-align: center
+	margin: 0
+
+header,
+section
+	max-width: 720px
+	margin: 0 auto
+
+.h1
+	font-size: 74px
+	line-height: .75
+	margin-top: 40px
+	margin-bottom: 50px
+	span
+		font-family: $default-font
+		font-weight: normal
+		font-size: 20px
+		text-transform: uppercase
+		letter-spacing: 1.2px
+
+.h2
+	font-style: 60px
+
+.h2 span
+	font-size: 20px
+
+.lato_regular
+	font-weight: normal
+
+.lato_bold
+	font-weight: bold
+
+.lato_heavy
+	font-weight: 800
+
+.lato_medium
+	font-weight: 500
+
+.lato_italic
+	font-weight: italic
+
+.lato_black
+	font-weight: 900
+
+.icon_blue
+	&_img
+		display: flex
+		border: 1px solid $accent
+		border-radius: 50px
+		text-align: center
+		width: 100px
+		height: 100px
+		margin: 0 auto
+		position: relative
+		text-align: center
+		margin-bottom: 15px
+		&::after
+			content: ''
+			position: absolute
+			top: 0
+			right: 0
+			bottom: 0
+			left: 0
+			background-color: $blue
+			border-radius: 50px
+			opacity: .5
+			z-index: 0
+		img
+			margin: auto
+			position: relative
+			z-index: 1
+	&_desc
+		text-transform: uppercase
+		color: $accent
+		font-weight: bold
+		text-align: center
+		line-height: 1.3
+
+.no_glue_icon
+	img
+		margin-right: 20px
+
+.eye_icon
+	img
+		margin-left: 24px
+
+.logo
+	margin: 0 auto
+	width: 100px
+	height: 90px
+	padding-top: 20px
+	background-color: $blue
+	border-radius: 0 0 30px 30px
+	text-align: center
+	img
+		width: 46px
+
+.header
+	background: $blue url("../img/sections/section1_bg.jpg")
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: center
+	max-height: 750px
+	h1
+		color: #fff
+
+.icons_box
+	padding-bottom: 10px
+
+.eyalashes_case
+	position: relative
+	margin-bottom: -50px
+	text-align: center
+
+	.discount
+		background-image: url("../img/sections/discount_bg.png")
+		background-position: center
+		background-repeat: no-repeat
+		color: #fff
+		font-size: 36px
+		font-weight: 900
+		line-height: 0.5
+		padding: 38px
+		position: absolute
+		right: -46px
+		top: 98px
+		span
+			font-size: 14px
+			font-weight: bold
+			&.percent
+				font-size: 22px
+
+.button_section
+	background-image: url("../img/sections/button_section_bg.jpg")
+	background-repeat: no-repeat
+	color: #fff
+	padding-top: 10px
+
+
 @import "media" // Всегда в конце
