@@ -50,7 +50,12 @@ h1, h2, h3, h4, h5, h6
 header,
 section
 	max-width: 720px
+	min-width: 720px
 	margin: 0 auto
+
+.container
+  max-width: 720px
+  min-width: 720px
 
 .h1
 	font-size: 74px
@@ -65,10 +70,39 @@ section
 		letter-spacing: 1.2px
 
 .h2
-	font-style: 60px
+	font-size: 60px
+	span
+		font-family: $default-font
+		font-weight: normal
+		font-size: 20px
+		letter-spacing: 1.2px
+		font-size: 20px
 
-.h2 span
-	font-size: 20px
+.button
+	background-color: $red
+	border-radius: 50px
+	box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.75)
+	color: #fff
+	display: block
+	font-size: 28px
+	font-weight: 800
+	line-height: 1.6
+	margin-top: 20px
+	padding: 16px 0
+	text-align: center
+	text-decoration: none
+	text-transform: uppercase
+	&:hover
+		background-color: lighten($red, 7%)
+		text-decoration: none
+		color: #fff
+	&:active
+		background-color: darken($red, 3%)
+		text-decoration: none
+		color: #fff
+	&:focus
+		text-decoration: none
+		color: #fff
 
 .lato_regular
 	font-weight: normal
@@ -176,11 +210,35 @@ section
 			&.percent
 				font-size: 22px
 
-.button_section
+.price_section
 	background-image: url("../img/sections/button_section_bg.jpg")
 	background-repeat: no-repeat
+	background-size: cover
 	color: #fff
 	padding-top: 10px
+	padding-bottom: 50px
+
+	.price
+		font-size: 18px
+		line-height: 1.3
+		span
+			font-size: 20px
+
+	.old_price
+		.price_value
+			font-size: 40px
+			text-decoration: line-through
+
+	.new_price
+		color: $accent
+		.price_value
+			font-size: 48px
+			margin-left: -15px
+			font-weight: 900
+
+.chevrone_wrapper
+	text-align: center
+	padding-top: 40px
 
 
 @import "media" // Всегда в конце
