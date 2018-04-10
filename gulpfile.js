@@ -12,7 +12,8 @@ var gulp           = require('gulp'),
 		autoprefixer   = require('gulp-autoprefixer'),
 		bourbon        = require('node-bourbon'),
 		ftp            = require('vinyl-ftp'),
-		notify         = require("gulp-notify");
+		notify         = require("gulp-notify"),
+		imageminMozjpeg = require('imagemin-mozjpeg');
 
 // Скрипты проекта
 gulp.task('scripts', function() {
@@ -33,7 +34,7 @@ gulp.task('browser-sync', function() {
 		},
 		notify: false,
 		// tunnel: true,
-		// tunnel: "projectmane", //Demonstration page: http://projectmane.localtunnel.me
+		// tunnel: "magnetic_lashes", //Demonstration page: http://projectmane.localtunnel.me
 	});
 });
 
@@ -57,7 +58,10 @@ gulp.task('watch', ['sass', 'scripts', 'browser-sync'], function() {
 
 gulp.task('imagemin', function() {
 	return gulp.src('app/img/**/*')
-	.pipe(cache(imagemin()))
+	.pipe(imagemin(
+		[imageminMozjpeg()],
+	 	{verbose: true}
+	))
 	.pipe(gulp.dest('dist/img'));
 });
 
