@@ -113,24 +113,6 @@ section
 		text-decoration: none
 		color: #fff
 
-.lato_regular
-	font-weight: normal
-
-.lato_bold
-	font-weight: bold
-
-.lato_heavy
-	font-weight: 800
-
-.lato_medium
-	font-weight: 500
-
-.lato_italic
-	font-weight: italic
-
-.lato_black
-	font-weight: 900
-
 .icon_blue
 	&_img
 		display: flex
@@ -383,5 +365,64 @@ section
 					width: 190px
 			h3
 				color: $gold
+
+.instagram_box
+	position: relative
+	&_icon
+		position: absolute
+		width: 70px
+		background: $blue
+		border-radius: 50px
+		display: block
+		right: 201px
+		bottom: -35px
+		padding: 12px
+
+.experts_section
+	background-image: url('../img/sections/experts_bg.jpg')
+	background-repeat: no-repeat
+	background-position: center
+	background-size: cover
+	color: #fff
+	padding-bottom: 40px
+
+.slider
+	.slide_item
+		text-align: center
+		font-family: "lato-eyelashes", sans-serif
+		h3
+			color: $accent
+			font-family: "lato-eyelashes", sans-serif
+			padding: 65px 0 30px
+			text-transform: uppercase
+			font-size: 22px
+			font-weight: bold
+			span
+				display: block
+				text-transform: none
+				font-size: 18px
+				font-weight: normal
+
+		p
+			margin: 0
+			font-weight: 400
+			font-size: 18px
+			font-style: italic
+
+	.owl-dots
+		text-align: center
+		padding-top: 40px
+		.owl-dot
+			border-radius: 10em
+			display: inline-block
+			height: 12px
+			margin-right: 7px
+			width: 12px
+			background-color: #fff
+			opacity: 0.2
+			transition: background-color .5s ease, opacity .5s ease
+			&.active
+				opacity: 1
+
 
 @import "media" // Всегда в конце
