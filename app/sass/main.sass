@@ -28,6 +28,7 @@ body textarea:required:valid
 
 html, body
 	height: 100%
+	width: 100%
 
 body
 	font-size: 16px
@@ -48,9 +49,10 @@ h1, h2, h3, h4, h5, h6
 	text-align: center
 	margin: 0
 
-section
+section,
+footer
 	max-width: 720px
-	min-width: 720px
+	min-width: 480px
 	margin: 0 auto
 
 section
@@ -58,8 +60,8 @@ section
 
 .container
 	width: 100%
-	max-width: 720px
-	min-width: 720px
+	max-width: 480px
+	min-width: 480px
 
 .h1
 	font-size: 74px
@@ -79,7 +81,7 @@ section
 	margin-bottom: 50px
 	span
 		font-family: $default-font
-		font-weight: normal
+		font-weight: 500
 		font-size: 20px
 		letter-spacing: 1.2px
 		line-height: 1.3
@@ -103,7 +105,7 @@ section
 	width: 100%
 	border: none
 	&:hover
-		background-color: lighten($red, 12%)
+		background-color: lighten($red, 8%)
 		text-decoration: none
 		color: #fff
 	&:active
@@ -120,8 +122,9 @@ section
 		border: 1px solid $accent
 		display: flex
 		height: 100px
-		margin-bottom: 15px
-		margin: 0 auto
+		margin-left: auto
+		margin-right: auto
+		margin-bottom: 10px
 		position: relative
 		width: 100px
 		&::after
@@ -171,16 +174,30 @@ section
 	background-size: cover
 	background-position: center
 	max-height: 750px
+	padding-top: 0
 	h1
 		color: #fff
+	&_shorter
+		max-height: 710px
+		padding-top: 40px
+		background-image: url("../img/sections/main_section_2_bg.jpg")
 
 .icons_box
 	padding-bottom: 10px
+	.icon_blue
+		display: inline-block
+		width: 32%
+	&_exceptions
+		.icon_blue_img
+				border: none
 
-.eyalashes_case
-	position: relative
+.eyelashes_case
 	text-align: center
-	margin: 0 auto
+
+	.eyelashes_case_img
+		position: relative
+		width: 360px
+		margin: 0 auto
 
 	.discount
 		background-image: url("../img/sections/discount_bg.png")
@@ -192,7 +209,7 @@ section
 		line-height: 0.5
 		padding: 38px
 		position: absolute
-		right: -46px
+		right: -32px
 		top: 98px
 		span
 			font-size: 14px
@@ -219,9 +236,11 @@ section
 		.price_value
 			font-size: 40px
 			text-decoration: line-through
+			line-height: 1.78
 
 	.new_price
 		color: $accent
+		padding-left: 25px
 		.price_value
 			font-size: 48px
 			margin-left: -15px
@@ -236,19 +255,26 @@ section
 			padding-bottom: 30px
 
 .bag_section
-	background: #dddde0; /* Old browsers */
-	background: linear-gradient(to bottom, #dddde0 0%,#d7d7da 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dddde0', endColorstr='#d7d7da',GradientType=0 ); /* IE6-9 */
+	background-image: url("../img/sections/bag_section_bg.jpg")
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: center
 	overflow: hidden
 	&_item
+		display: flex
+		align-items: flex-end
 		font-size: 20px
 		background-image: url('../img/sections/bag.png')
 		background-repeat: no-repeat
 		background-position: center
 		text-align: center
 		margin-bottom: -50px
-		padding: 300px 110px 70px
 		font-weight: normal
+		width: 100%
+		height: 470px
+		padding: 0 30px 60px
+		p
+			line-height: 1.4
 
 .video_section
 	background: $blue url('../img/sections/video_section_bg.jpg')
@@ -263,6 +289,7 @@ section
 		height: 210px
 		display: flex
 		.play_button
+			display: none
 			margin: auto
 			background-image: url('/img/icons/play_btn_icon.png')
 			background-repeat: no-repeat
@@ -328,6 +355,7 @@ section
 				height: 120px
 				margin: 0
 				border-radius: 60px
+				margin-bottom: 10px
 				&::after
 					background-color: darken($blue, 50%)
 					opacity: .2
@@ -347,14 +375,14 @@ section
 
 	.advantages_item
 		&_img,
-			margin: 0 -15px
 			height: 520px
 			overflow: hidden
+			margin-right: -15px
 		&_desc
 			padding: 23px
 			background-color: #fff
-			margin: 0 -15px
 			height: 520px
+			margin-left: -15px
 			h3
 				font-family: "lato-eyelashes", sans-serif
 				text-align: left
@@ -382,10 +410,16 @@ section
 			.advantages_item_desc
 				background-color: $blue
 				color: #fff
-				padding-left: 130px
-				padding-right: 20px
+				margin-right: -15px
+				div
+					padding: 0 15px
+					width: 220px
+					margin-left: auto
 				ul
 					width: 190px
+			.advantages_item_img
+				margin-left: -15px
+				margin-right: 0
 			h3
 				color: $gold
 
@@ -475,7 +509,7 @@ section
 		display: block
 		width: 100%
 		border-radius: 30px
-		border-color: $accent
+		border: 2px solid $accent
 		padding: 10px
 		text-align: center
 		color: $accent
@@ -487,6 +521,39 @@ section
 				text-align: center
 		&:focus
 			background-color: rgba(0,0,0,.5)
+
+footer
+	background-color: darken($blue, 5%)
+	padding: 30px 0
+	text-align: center
+	font-size: 12px
+	color: lighten($blue, 40%)
+	a
+		color: lighten($blue, 40%)
+		text-decoration: underline
+	.footer_bottom_left
+		text-align: right
+	.footer_bottom_right
+		text-align: left
+	.question_link
+		font-size: 14px
+		text-transform: uppercase
+		color: $accent
+		font-weight: 800
+		padding-bottom: 20px
+		display: block
+		&:hover
+			color: lighten($accent, 15%)
+
+.question_icon
+	margin: 0 auto
+	border: 1px solid $accent
+	border-radius: 20px
+	height: 30px
+	width: 30px
+	background-image: url('../img/icons/question_mark_icon.png')
+	background-repeat: no-repeat
+	background-position: center
 
 
 @import "media" // Всегда в конце
