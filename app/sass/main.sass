@@ -99,21 +99,15 @@ section
 	margin-top: 30px
 	padding: 16px 10px
 	text-align: center
-	text-decoration: none
 	text-transform: uppercase
 	transition: all .2s ease
 	width: 100%
 	border: none
 	&:hover
 		background-color: lighten($red, 8%)
-		text-decoration: none
 		color: #fff
 	&:active
 		background-color: darken($red, 6%)
-		text-decoration: none
-		color: #fff
-	&:focus
-		text-decoration: none
 		color: #fff
 
 .icon_blue
@@ -325,7 +319,11 @@ section
 		span
 			letter-spacing: normal
 
-	.instruction_section_item
+	&_item
+		width: 50%
+		display: inline-block
+		float: left
+		padding: 0 20px
 		&_img
 			text-align: center
 		padding-top: 30px
@@ -504,6 +502,7 @@ section
 .order_form
 	padding-top: 30px
 	input
+		outline: none
 		background-color: transparent
 		margin-bottom: 10px
 		display: block
