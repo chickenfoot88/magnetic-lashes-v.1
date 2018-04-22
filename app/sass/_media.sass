@@ -17,8 +17,114 @@
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
-	/**/
 
+  .advantages_section
+    .advantages_item
+      &_img
+        display: none
+      .advantages_item_desc
+        max-width: 320px
+        ul
+          flex-basis: 100%
+          padding-top: 20px
+          li
+            margin-bottom: 20px
+            display: -webkit-flex
+            display: -ms-flex
+            display: flex
+        span
+          margin-right: 15px
+        h3
+          width: initial
+          text-align: center
+
+      &_inverse
+        .advantages_item_desc
+          > *
+            flex-basis: 100%
+
+  .h1
+    font-size: 50px
+    span
+      font-size: 14px
+
+  .icon_blue
+    &_desc
+      font-size: 14px
+
+  .eyelashes_case
+    .eyelashes_case_img
+      min-width: auto
+
+  .main_section
+    max-height: 705px
+
+  .header-h2
+    .h2
+      font-size: 56px
+
+  footer
+    .container
+      padding: 0
+      .row
+        margin: 0
+        > div
+          padding: 0
+    .question_link
+      font-size: 10px
+
+    .footer_bottom_left
+      text-align: center
+    .footer_bottom_right
+      text-align: center
+
+@media only screen and (max-width : 414px)
+  .eyelashes_case
+    .discount
+      right: 10px
+
+  .button
+    font-size: 24px
+
+  .header-h2
+    .h2
+      font-size: 52px
+
+  .instruction_section
+    background-image: none
+
+@media only screen and (max-width : 375px)
+  .eyelashes_case
+    .discount
+      right: 0
+
+  .order_section
+    .price_box
+      .price
+        font-size: 14px
+      .old_price
+        .price_value
+          font-size: 32px
+      .new_price
+        .price_value
+          font-size: 32px
+
+  .h1
+    font-size: 48px
+    span
+      font-size: 12px
+
+  .button
+    font-size: 20px
+
+  .header-h2
+    .h2
+      font-size: 46px
+
+  .slider
+  	.slide_item
+      p
+        line-height: 1.3
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
@@ -26,28 +132,23 @@
     .video_description
       p
         font-size: 20px
-  .instruction_section
-    .instruction_section_item
-      width: 100%
-      font-size: 24px
-      &_desc
-        text-align: center
-        padding: 20px 0 30px
-        line-height: 1.2
 
-  .instruction_section_inverse
-    .icon_blue
-      padding: 0
-    .icon_blue_img
-      margin: 0 auto
-    .instruction_section_item_desc
-      margin-top: -50px
-      .order
-        padding-left: 120px
-        text-align: left
-      .description
-        padding: 0 50px
-        font-size: 28px
+  .eyelashes_case
+    .discount
+      right: 0
+      font-size: 28px
+      padding: 35px
+
+  .price_box
+    .chevrone_wrapper
+      display: none
+
+  .header-h2
+    .h2
+      font-size: 42px
+      span
+        font-size: 18px
+
 
 /*==========  Mobile First  ==========*/
 
