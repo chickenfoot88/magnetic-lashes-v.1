@@ -643,7 +643,40 @@
 	<script src="js/scripts.min.js"></script>
 	<script src="http://cdn.leadrock.com/js/validation.js"></script>
 	<script src="http://leadrock.com/integration.js"></script>
-	<script src="js/integration.js"></script>
+	<script>
+		$(document).ready(function() {
+			validate();
+			(function() {
+				Leadrock.init({
+					formSelectors: {
+						formsClassName: 'lead_form',
+						name: '.name',
+						phone: '.phone',
+						email: '.email',
+						price: '.price',
+						other: '.other-simple-data'
+					},
+					goal: 'Lead',
+					urlConfig: {
+						thankYouPage: 'success.html'
+					}
+				});
+			})(Leadrock);
+
+			window.onload = function(e){
+				var forms = document.getElementsByClassName('form');
+				for (i = 0; i < forms.length; i++) {
+					var form = forms[i];
+					form.addEventListener('submit', function (e) {
+						if(this.querySelector('.phone').value == '') {
+							e.stopImmediatePropagation();
+							e.preventDefault();
+						}
+					});
+				}
+			}
+		});
+	</script>
 
 </body>
 </html>
