@@ -1,6 +1,6 @@
 # Посадочная страница для продукта "Magnetic Lashes" #
 Версия 1.  
-Сайт проекта: [Magnetic Lashes 2](http://adel-ismagilov.ru/projects/magnetic-lashes-2/)
+Сайт проекта: [Magnetic Lashes 1](http://adel-ismagilov.ru/projects/magnetic-lashes-1/)
 ##### В работе использовались: #####
 1. Task manager: [Gulp](https://gulpjs.com/)
 2. CSS preproccessor: [SASS](http://sass-lang.com/)
